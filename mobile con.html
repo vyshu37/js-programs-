@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function mobile(mobilename,mobileprocessor,mobileprice){
+            this.mobilename=mobilename;
+            this.mobileprocessor=mobileprocessor;
+            this.mobileprice=mobileprice;
+         }
+         let m1=new mobile("samsung","snapdragon",48000);
+         let m2=new mobile("vivo","snapdragon",39000);
+         let m3=new mobile("iphone","ios",15000);
+         let mobiles=[m1,m2,m3];
+         for(let m of mobiles)
+         {
+            if(m.mobileprice>20000){
+            for(let key in m){
+                document.write(key+"="+m[key]+"<br>")
+            }
+            document.write("<br>")
+         }
+        }
+
+         
+    </script>
+</body>
+</html>
