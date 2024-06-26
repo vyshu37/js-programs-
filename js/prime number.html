@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <script>
+        let num=prompt("enter number");
+        let count=0;
+        if(num<=3){
+            document.write("not a prime number")
+        }
+        else if(num<=3){
+            document.write("prime number");
+        }
+        else if(num%2==0 || num%3==0){
+            document.write("not a prime number")
+        }
+        else{
+            for(let i=5;i<=parseInt(num/5);i+=6){
+                if(num%i==0 || num%(i+2)==0){
+                    count++;
+                }
+            }
+            if(count==0){
+                document.write("prime number");
+            }
+            else{
+                document.write("not a prime number");
+            }
+        }
+    </script>
+  </body>
+</html>
