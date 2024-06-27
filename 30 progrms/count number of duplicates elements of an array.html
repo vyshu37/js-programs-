@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countDuplicates(arr) {
+  let counter = 0; 
+
+  for (let outer = 0; outer < arr.length; outer++) {
+    for (let inner = arr[outer + 1]; inner < arr.length; inner++) {
+
+      if (arr[outer] === arr[inner]) {
+        counter++;     
+      }
+
+    }
+  }
+
+  return counter; 
+}
+
+document.write(countDuplicates([1,2,1,4,2,6,1]))
+    </script>
+    
+</body>
+</html>
