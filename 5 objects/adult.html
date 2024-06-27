@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function student(studentname,studentage){
+            this.studentname=studentname;
+            this.studentage=studentage;
+         }
+         let s1=new student("john","17");
+         let s2=new student("jane","19");
+         let s3=new student("jack","18");
+         let students=[s1,s2,s3];
+       let adultstudents=students.map((s)=>{
+        return {
+            studentname:s.studentname,
+            studentage:s.studentage,
+            isAdult:s.studentage>=18
+        }
+       })
+
+       for(let a of adultstudents){
+            for(let key in a){
+                document.write(key+" : "+a[key])
+            }
+            document.write("<br>")
+       }
+         
+    </script>
+    
+</body>
+</html>
