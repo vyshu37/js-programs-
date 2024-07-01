@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <img src="C:\Users\jayashri\OneDrive\Desktop\th.jpeg"alt=""height="200"width="400">
+
+    
+</head>
+<style>
+    body{
+          margin-left: 650px;
+          background-color: bisque;     
+    }
+    .container{
+        margin-top: 100px;
+        border: solid;
+        width: 200px;
+        height: 250px;
+        padding: 10px;
+        
+    }
+    .img{
+        margin-left:300px;
+    }
+    
+</style>
+
+<body>
+        <div class="container">
+            <div class="container1">
+                <label for="" class="elements">Username</label>
+                <input type="text" id="user" required>
+                
+            </div>
+            <div class="container1">
+                <label for="" class="elements">Password</label>
+                <input type="text" id="pwd" required>
+            </div>
+            <div class="container1">
+                <label for="" class="elements">Type of Loan</label>
+                <!-- <div> -->
+                <select name="" id="tole" onchange="login()">Select loan type
+                    <option value="11">Home Loan</option>
+                    <option value="15">Vehicle Loan</option>
+                    <option value="5">Education Loan</option>
+                    <option value="12">Personal Loan</option>
+                </select>
+                <!-- </div> -->
+                <!-- <input type="text" id="tole" required pattern="[0-9]{2,3}"> -->
+            </div>
+            <div class="container1">
+                <label for="" class="elements">Principal Amount</label>
+                <input type="text" id="pam" required pattern="[0-9]{3,8}">
+            </div>
+            <div class="container1">
+                <label for="" class="elements">Tenure</label>
+                <input type="text" id="yr" required pattern="[0-9]{1,2}">
+            </div>
+            <br><button onclick="login()" id="loginbtn">Login</button><br>
+            <label for="" id="result"></label>
+        </div>
+    <script>
+        function login() {
+            var uname = document.getElementById("user").value;
+            var pwd = document.getElementById("pwd").value;
+            var reqpwd = pwd.substring(0, 3) + "@123";
+            if (reqpwd == pwd) {
+            var r = parseInt(document.getElementById("tole").value);
+            var p = parseInt(document.getElementById("pam").value);
+            var t = parseInt(document.getElementById("yr").value);
+            let amt = parseInt((p * r * t) / 100);
+            let loan = amt + p;
+            if (loan > 500000) {
+                loan = loan + 5000;
+            }
+            let m_emi= parseInt(loan/(t*12));
+            document.getElementById("result").innerHTML="Your emi is: "+m_emi;
+            document.getElementById("result").style.color="black";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Username or Password is incorrect";
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

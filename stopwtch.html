@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body{
+    text-align: center;
+    background-color:orchid;
+   }
+</style>
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="cleared()">stop</button>
+    <h1 id="myh1"></h1>
+<script>
+        var time,sec=0,min=0,hour=0,myvar;
+        function start(){
+             myvar=setInterval(stop,1000)
+        }
+        function stop(){
+            document.getElementById("myh1").innerHTML=hour+" hr:"
+            document.getElementById("myh1").innerHTML+=min+" min: "
+            document.getElementById("myh1").innerHTML+=sec+" sec"
+            sec++;
+            if(sec==60){
+               min++;
+               sec=0
+            }
+            else if(min==60){
+                hour++;
+                min=0
+            }
+        }
+    function cleared(){
+        console.log("hello")
+        clearInterval(myvar)
+      }
+    </script>
+</body>
+</html>
