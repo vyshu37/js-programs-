@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj={'a':1,'b':2,'c':3,'d':4}
+        const keys=['b','c']
+        l=new Object()
+        for(a of keys){
+            for(k in obj){
+                if(k==a){
+                   l[k]=obj[k] 
+                }
+            }
+        }
+        console.log(l);
+    </script>
+</body>
+</html>

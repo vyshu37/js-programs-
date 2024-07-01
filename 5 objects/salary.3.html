@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <script>
+            const employees = [
+  { name: 'zlice', salary: 50000 },
+  { name: 'Bob', salary: 50000 },
+  { name: 'Charlie', salary: 40000 },
+];
+sal=parseInt(prompt("enter salary"))
+b=employees.filter((a)=>(a.salary>sal))
+l=[]
+for(a of b){
+    l.push(a.name)
+}
+
+l=l.sort()
+console.log(l)
+
+        </script>
+    </body>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function movie(moviename,moviehero,moviegenre,releaseDate){
+            this.moviename=moviename;
+            this.moviehero=moviehero;
+            this.moviegenre=moviegenre;
+            this.releaseDate=releaseDate;
+         }
+         let m1=new movie("movie A","hero A","action","2020-01-15");
+         let m2=new movie("movie B","hero B","drama","2019-06-10");
+         let m3=new movie("movie C","hero C","comedy","2021-12-25");
+         let m4=new movie("movie D","hero D","horror","2018-04-05");
+         let movies=[m1,m2,m3,m4];
+         for(let m of movies)
+         {
+        let arr=movies.sort(function(a,b){return ( new Date(a.releaseDate)-new Date(b.releaseDate))})
+    console.log(arr)
+         }
+</script>
+</body>
+</html>
