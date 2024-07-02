@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        userage=parseInt(prompt("enter your age"));
+        let checkuser=new Promise((res,rej)=>{
+            if(userage>21)
+            {
+                res("welcome to the party");
+            }
+            else{
+                rej("you are not allowed to the party");
+            }
+        });
+        checkuser
+        .then((msg)=> document.write(msg))
+        .catch((msg)=> document.write(msg))
+       . finally(()=>document.write("thanks for visiting"));
+    </script>
+    
+</body>
+</html>

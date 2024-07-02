@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class drf{
+            constructor(firstname,lastname,rollno){
+                this.firstname=firstname;
+                this.lastname=lastname;
+                this.rollno=rollno;
+            }
+            getFullDetails(){
+                return this.firstname+""+this.lastname+"his/her rollno is"+this.rollno
+            }
+            static welcome(){
+                return"welcome to class";
+            }
+        }
+            var student1=new drf("vyshu","raj",132);
+            document.write(student1.getFullDetails()+"<br>");
+            document.write(drf.welcome());
+    </script>
+    
+</body>
+</html>
